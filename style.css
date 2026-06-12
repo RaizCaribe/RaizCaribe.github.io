@@ -1,0 +1,740 @@
+:root {
+    --verde-principal: #2f6b3f;
+    --verde-claro: #7fb069;
+    --verde-suave: #edf7ed;
+    --amarillo: #f4c95d;
+    --naranja: #d9822b;
+    --marron: #6b4226;
+    --blanco: #ffffff;
+    --gris-claro: #f6f6f6;
+    --gris-texto: #555555;
+    --oscuro: #1f2d1f;
+    --sombra: 0 10px 30px rgba(0, 0, 0, 0.12);
+} 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo Body */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--gris-claro);
+    color: var(--oscuro);
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ================= ENCABEZADO ================= */
+.header {
+    width: 100%;
+    background-color: var(--blanco);
+    box-shadow: var(--sombra);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Menu */
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 34px;
+}
+
+.logo h1 {
+    color: var(--verde-principal);
+    font-size: 22px;
+    line-height: 1;
+}
+
+.logo p {
+    font-size: 12px;
+    color: var(--gris-texto);
+}
+
+/* Menú de navegación */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--oscuro);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--verde-principal);
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: var(--verde-principal);
+    color: var(--blanco);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Botones */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+
+    text-decoration: none;
+    padding: 12px 26px;
+    min-width: 150px;
+
+    border-radius: 30px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Botón verde */
+.btn.primary {
+    background-color: var(--verde-principal);
+    color: var(--blanco);
+}
+
+/* Botón amarillo */
+.btn.secondary {
+    background-color: var(--amarillo);
+    color: var(--oscuro);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sombra);
+}
+
+/* seccion principal */
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 20px;
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.tag {
+    display: inline-block;
+    background-color: var(--verde-suave);
+    color: var(--verde-principal);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    line-height: 1.1;
+    color: var(--oscuro);
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    color: var(--gris-texto);
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Tarjeta verde */
+.hero-card {
+    background: linear-gradient(135deg, var(--verde-principal), var(--verde-claro));
+    color: var(--blanco);
+    padding: 35px;
+    border-radius: 30px;
+    box-shadow: var(--sombra);
+}
+
+.hero-card h3 {
+    margin-bottom: 15px;
+    font-size: 26px;
+}
+
+.mini-stats {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.mini-stats div {
+    background-color: rgba(255,255,255,0.18);
+    padding: 15px;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.mini-stats strong {
+    display: block;
+    font-size: 22px;
+}
+
+/* Secciones */
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title p {
+    color: var(--verde-principal);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-title h2 {
+    font-size: 34px;
+    color: var(--oscuro);
+}
+
+.section-title.light p,
+.section-title.light h2 {
+    color: var(--blanco);
+}
+
+/* Rutas */
+.path-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.path-card {
+    background-color: var(--blanco);
+    padding: 28px;
+    border-radius: 25px;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s ease;
+}
+
+.path-card:hover {
+    transform: translateY(-8px);
+}
+
+.path-card span {
+    font-size: 40px;
+}
+
+.path-card h3 {
+    margin: 15px 0 10px;
+    color: var(--verde-principal);
+}
+
+.path-card p {
+    color: var(--gris-texto);
+    margin-bottom: 15px;
+}
+
+.path-card a {
+    color: var(--naranja);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+/* Empresas */
+.empresa-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.empresa-card {
+    border: none;
+    background-color: var(--blanco);
+    padding: 12px;
+    border-radius: 24px;
+    box-shadow: var(--sombra);
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.empresa-card:hover {
+    background-color: var(--verde-suave);
+    transform: translateY(-6px);
+}
+
+.empresa-card img {
+    width: 250px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.empresa-card h3 {
+    margin: 12px 0;
+    color: var(--verde-principal);
+}
+
+.empresa-card p {
+    color: var(--gris-texto);
+}
+
+/* Mensaje dinámico de empresas */
+.empresa-info {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: var(--verde-principal);
+    color: var(--blanco);
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Filtros */
+.filters {
+    background-color: var(--blanco);
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: var(--sombra);
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.filters input,
+.filters select {
+    width: 100%;
+    padding: 13px;
+    border-radius: 12px;
+    border: 1px solid #dddddd;
+    font-family: inherit;
+}
+
+/* Productos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background-color: var(--blanco);
+    border-radius: 26px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Img producto */
+.product-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.product-content {
+    padding: 24px;
+}
+
+.product-content h3 {
+    color: var(--verde-principal);
+    margin-bottom: 8px;
+}
+
+.product-content p {
+    color: var(--gris-texto);
+    margin-bottom: 12px;
+}
+
+/* Atributos visuales */
+.attributes {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+.attributes span {
+    background-color: var(--verde-suave);
+    color: var(--verde-principal);
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+/* Impacto */
+.impacto {
+    max-width: none;
+    background: linear-gradient(135deg, var(--verde-principal), var(--marron));
+    color: var(--blanco);
+}
+
+.impact-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.impact-card {
+    background-color: rgba(255,255,255,0.12);
+    padding: 30px;
+    border-radius: 25px;
+}
+
+.impact-card span {
+    font-size: 42px;
+}
+
+.impact-card h3 {
+    margin: 15px 0;
+}
+
+/* Agrolab */
+.agrolab-content {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.agrolab-content h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: var(--verde-principal);
+}
+
+.agrolab-content p {
+    color: var(--gris-texto);
+    margin-bottom: 18px;
+}
+
+.agrolab-content ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.agrolab-content li {
+    margin-bottom: 8px;
+}
+
+.testimonial {
+    background-color: var(--verde-suave);
+    padding: 35px;
+    border-radius: 30px;
+    box-shadow: var(--sombra);
+}
+
+/* Proyectos */
+.project-card {
+    background-color: var(--blanco);
+    padding: 35px;
+    border-radius: 30px;
+    box-shadow: var(--sombra);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.project-card h3 {
+    color: var(--verde-principal);
+    margin-bottom: 10px;
+}
+
+/* Formulario */
+.download-form {
+    max-width: 850px;
+    margin: auto;
+    background-color: var(--blanco);
+    padding: 30px;
+    border-radius: 28px;
+    box-shadow: var(--sombra);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.download-form input,
+.download-form select {
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #dddddd;
+    font-family: inherit;
+}
+
+.download-form button {
+    grid-column: span 2;
+}
+
+.form-message {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 700;
+    color: var(--verde-principal);
+}
+
+/* Aliados */
+.logos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.logos-grid div {
+    background-color: var(--blanco);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Contacto */
+.contact-card {
+    background: linear-gradient(135deg, var(--verde-principal), var(--verde-claro));
+    color: var(--blanco);
+    padding: 50px;
+    border-radius: 35px;
+    text-align: center;
+    box-shadow: var(--sombra);
+}
+
+.contact-card h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.contact-buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* ChatIA */
+.chatbot {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 2000;
+}
+
+/* Boton */
+.chat-toggle {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--verde-principal);
+    color: var(--blanco);
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: var(--sombra);
+}
+
+/* Ventana */
+.chat-window {
+    display: none;
+    width: 330px;
+    background-color: var(--blanco);
+    border-radius: 22px;
+    box-shadow: var(--sombra);
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.chat-window.active {
+    display: block;
+}
+
+.chat-header {
+    background-color: var(--verde-principal);
+    color: var(--blanco);
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header button {
+    border: none;
+    background: none;
+    color: var(--blanco);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.chat-body {
+    height: 250px;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.bot-message,
+.user-message {
+    padding: 10px 13px;
+    border-radius: 16px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.bot-message {
+    background-color: var(--verde-suave);
+    color: var(--verde-principal);
+}
+
+.user-message {
+    background-color: var(--amarillo);
+    color: var(--oscuro);
+    text-align: right;
+}
+
+.chat-form {
+    display: flex;
+    border-top: 1px solid #eeeeee;
+}
+
+.chat-form input {
+    flex: 1;
+    border: none;
+    padding: 13px;
+    font-family: inherit;
+}
+
+.chat-form button {
+    border: none;
+    background-color: var(--verde-principal);
+    color: var(--blanco);
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+/* footer */
+.footer {
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 25px;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+    .hero,
+    .agrolab-content {
+        grid-template-columns: 1fr;
+    }
+
+    .path-grid,
+    .empresa-grid,
+    .product-grid,
+    .impact-grid,
+    .logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filters {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero h2 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 650px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        right: 20px;
+        background-color: var(--blanco);
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 18px;
+        box-shadow: var(--sombra);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .path-grid,
+    .empresa-grid,
+    .product-grid,
+    .impact-grid, 
+    .logos-grid,
+    .filters,
+    .download-form {
+        grid-template-columns: 1fr;
+    }
+
+    .download-form button {
+        grid-column: span 1;
+    }
+
+    .project-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .chat-window {
+        width: 300px;
+    }
+}

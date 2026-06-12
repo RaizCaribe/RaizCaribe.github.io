@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raíz Caribe | Ecosistema Agroempresarial</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Menu -->
+    <header class="header">
+        <nav class="navbar">
+
+            <!-- Logo -->
+            <div class="logo">
+                <span class="logo-icon">🌱</span>
+                <div>
+                    <h1>Raíz Caribe</h1>
+                    <p>Ecosistema agroempresarial</p>
+                </div>
+            </div>
+
+            <button class="menu-btn" id="menuBtn">☰</button>
+
+            <!-- Navegación -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#empresas">Empresas</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#impacto">Impacto</a></li>
+                <li><a href="#agrolab">Agrolab</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- Principal -->
+    <main>
+
+        
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <p class="tag">Agroindustria · Innovación · Comunidad</p>
+
+                <h2>Productos del Caribe con identidad, impacto y valor sostenible</h2>
+
+                <p class="hero-text">
+                    Raíz Caribe conecta marcas, emprendedores, productores locales y aliados 
+                    estratégicos en un ecosistema agroempresarial moderno, humano y sostenible
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#catalogo" class="btn primary">Explorar catálogo</a>
+                    <a href="#impacto" class="btn secondary">Conocer impacto</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta derecha -->
+            <div class="hero-card">
+                <h3>🌿 Portafolio Raíz</h3>
+                <p>Productos saludables, artesanales, frescos, congelados y de alto valor agregado.</p>
+            </div>
+        </section>
+
+        <!-- Rutas segun usuario -->
+        <section class="section user-paths">
+            <div class="section-title">
+                <p>Elige tu ruta</p>
+                <h2>¿Cómo quieres conectar con Raíz?</h2>
+            </div>
+
+            <div class="path-grid">
+
+                <!-- Ruta para compradores -->
+                <article class="path-card">
+                    <span>🛒</span>
+                    <h3>Soy comprador o distribuidor</h3>
+                    <p>Conoce nuestro portafolio de productos y solicita información comercial.</p>
+                    <a href="#catalogo">Ver productos</a>
+                </article>
+
+                <!-- Ruta para aliados -->
+                <article class="path-card">
+                    <span>🤝</span>
+                    <h3>Soy aliado institucional</h3>
+                    <p>Descubre nuestro impacto social, ambiental y económico.</p>
+                    <a href="#impacto">Ver impacto</a>
+                </article>
+
+                <!-- Ruta para emprendedores -->
+                <article class="path-card">
+                    <span>🚀</span>
+                    <h3>Soy emprendedor</h3>
+                    <p>Haz parte del ecosistema de formación, innovación y crecimiento de Agrolab.</p>
+                    <a href="#agrolab">Ir a Agrolab</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Empresas Raiz -->
+        <section class="section empresas" id="empresas">
+            <div class="section-title">
+                <p>Empresas Raíz</p>
+                <h2>Un portafolio organizado por líneas de negocio</h2>
+            </div>
+
+            <div class="empresa-grid">
+
+                <!-- Botones de empresas -->
+                <button class="empresa-card" data-empresa="Despensa Caribe">
+                    <img src="img/despensa.jpg" alt="Despensa Caribe">
+                    <h3>Despensa Caribe</h3>
+                    <p>Productos de consumo diario, saludables y artesanales.</p>
+                </button>
+
+                <button class="empresa-card" data-empresa="Panadería Raíz">
+                    <img src="img/panaderia.jpg" alt="Panaderia Raíz">
+                    <h3>Panadería Raíz</h3>
+                    <p>Panadería, repostería y productos sin gluten.</p>
+                </button>
+
+                <button class="empresa-card" data-empresa="Frescos del Campo">
+                    <img src="img/frescos.jpg" alt="Frescos del campo">
+                    <h3>Frescos del Campo</h3>
+                    <p>Productos frescos de productores locales.</p>
+                </button>
+
+                <button class="empresa-card" data-empresa="Agrolab Raíz">
+                    <img src="Img/lab.jpg" alt="Agrolab Raiz">
+                    <h3>Agrolab Raíz</h3>
+                    <p>Formación, innovación y acompañamiento emprendedor.</p>
+                </button>
+
+            </div>
+
+            <!-- informacion empresas -->
+            <div class="empresa-info" id="empresaInfo">
+                Selecciona una empresa para conocer su enfoque.
+            </div>
+        </section>
+
+        <!-- Catalogo -->
+        <section class="section catalogo" id="catalogo">
+            <div class="section-title">
+                <p>Catálogo inteligente</p>
+                <h2>Encuentra productos según tu necesidad</h2>
+            </div>
+
+            <div class="filters">
+
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Buscar producto, atributo o categoría..."
+                >
+
+                <select id="categoryFilter">
+                    <option value="todos">Todas las categorías</option>
+                    <option value="despensa">Despensa</option>
+                    <option value="panaderia">Panadería</option>
+                    <option value="bebidas">Bebidas</option>
+                    <option value="frescos">Frescos</option>
+                    <option value="congelados">Congelados</option>
+                </select>
+
+                <select id="consumerFilter">
+                    <option value="todos">Todo tipo de consumidor</option>
+                    <option value="saludable">Saludable / Fit</option>
+                    <option value="vegano">Vegano</option>
+                    <option value="gourmet">Gourmet</option>
+                    <option value="tradicional">Tradicional</option>
+                </select>
+
+                <select id="attributeFilter">
+                    <option value="todos">Todos los atributos</option>
+                    <option value="organico">Orgánico</option>
+                    <option value="sin gluten">Sin gluten</option>
+                    <option value="artesanal">Artesanal</option>
+                    <option value="sin conservantes">Sin conservantes</option>
+                </select>
+
+            </div>
+
+            <div class="product-grid" id="productGrid"></div>
+        </section>
+
+        <!-- Impacto Raiz -->
+        <section class="section impacto" id="impacto">
+            <div class="section-title light">
+                <p>Impacto Raíz</p>
+                <h2>Más que productos: transformación social, ambiental y económica</h2>
+            </div>
+
+            <div class="impact-grid">
+
+                <article class="impact-card">
+                    <span>👩‍🌾</span>
+                    <h3>Impacto social</h3>
+                    <p>
+                        Apoyo a productores locales, mujeres cabeza de hogar, comunidades 
+                        campesinas y pequeños emprendedores.
+                    </p>
+                </article>
+
+                <article class="impact-card">
+                    <span>🌎</span>
+                    <h3>Impacto ambiental</h3>
+                    <p>
+                        Promoción de buenas prácticas agrícolas, sostenibilidad, reducción de residuos 
+                        y producción responsable.
+                    </p>
+                </article>
+
+                <article class="impact-card">
+                    <span>📈</span>
+                    <h3>Impacto económico</h3>
+                    <p>
+                        Fortalecimiento de cadenas productivas, comercialización y crecimiento 
+                        de emprendimientos agroindustriales.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- Agrolab Raiz -->
+        <section class="section agrolab" id="agrolab">
+            <div class="agrolab-content">
+                <div>
+                    <p class="tag">Agrolab Raíz</p>
+                    <h2>Escuela, laboratorio y ecosistema para emprendedores</h2>
+
+                    <p>
+                        Agrolab Raíz impulsa la formación, innovación y crecimiento de emprendedores 
+                        agroindustriales mediante programas, convocatorias, mentorías y acompañamiento.
+                    </p>
+
+                    <ul>
+                        <li>✅ Programas de formación</li>
+                        <li>✅ Testimonios de emprendedores</li>
+                        <li>✅ Convocatorias abiertas</li>
+                        <li>✅ Acompañamiento para fortalecer marcas</li>
+                    </ul>
+
+                    <a href="#contacto" class="btn primary">
+                        Quiero hacer parte
+                    </a>
+                </div>
+
+                <div class="testimonial">
+                    <h3>Testimonio</h3>
+                    <p>
+                        “Gracias a Raíz fortalecimos nuestra marca, mejoramos la presentación de 
+                        nuestros productos y encontramos nuevas oportunidades comerciales.”
+                    </p>
+                    <strong>— Emprendedor aliado</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos -->
+        <section class="section proyectos">
+            <div class="section-title">
+                <p>Proyectos</p>
+                <h2>Apoya a campesinos y pequeños emprendedores</h2>
+            </div>
+
+            <div class="project-card">
+                <div>
+                    <h3>Fondo Semilla Raíz</h3>
+                    <p>
+                        Iniciativa de crowdfunding para apoyar productores locales, mejorar procesos, 
+                        fortalecer empaques y ampliar oportunidades de comercialización.
+                    </p>
+                </div>
+
+                <a href="#contacto" class="btn secondary"> 
+                    Quiero apoyar </a>
+            </div>
+        </section>
+
+        <!-- Catalogo  -->
+        <section class="section download">
+            <div class="section-title">
+                <p>Catálogo completo</p>
+                <h2>Descarga estratégica del portafolio Raíz</h2>
+            </div>
+
+            <form class="download-form" id="downloadForm">
+
+                <input type="text" id="nombre" placeholder="Nombre completo" required>
+
+                <input type="text" id="empresa" placeholder="Empresa o institución" required>
+
+                <input type="email" id="correo" placeholder="Correo electrónico" required>
+
+                <select id="interes" required>
+                    <option value="">Selecciona tu interés</option>
+                    <option value="comprador">Comprar productos</option>
+                    <option value="aliado">Ser aliado</option>
+                    <option value="emprendedor">Ser emprendedor</option>
+                    <option value="exportacion">Productos para exportación</option>
+                </select>
+
+                <button type="submit" class="btn primary">
+                    Descargar catálogo
+                </button>
+
+            </form>
+
+            <p class="form-message" id="formMessage"></p>
+        </section>
+
+        <!-- Aliados y certificaciones-->
+        <section class="section aliados">
+            <div class="section-title">
+                <p>Red Raíz</p>
+                <h2>Tiendas aliadas, instituciones y certificaciones</h2>
+            </div>
+
+            <div class="logos-grid">
+                <div>🏪 EcoLife</div>
+                <div>🏛️ CECAR</div>
+                <div>✅ BPM</div>
+                <div>🌱 Sello Verde</div>
+                <div>🚫 Sin gluten</div>
+                <div>🌎 BPA</div>
+            </div>
+        </section>
+
+        <!-- =Contacto -->
+        <section class="section contacto" id="contacto">
+            <div class="contact-card">
+                <h2>Conecta con Raíz Caribe</h2>
+                <p>
+                    Escríbenos para compras, alianzas, distribución, convocatorias o participación 
+                    en el ecosistema emprendedor.
+                </p>
+
+                <div class="contact-buttons">
+                    <a href="https://wa.me/573122725438" target="_blank" class="btn primary">
+                        WhatsApp
+                    </a>
+
+                    <a href="mailto:raizcaribe.co@gmail.com" class="btn secondary">
+                        Correo
+                    </a>
+
+                    <a href="https://instagram.com/raizcaribe.co" target="_blank" class="btn secondary">
+                        Instagram
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Asistente IA -->
+    <div class="chatbot">
+
+        <button class="chat-toggle" id="chatToggle">💬</button>
+
+        <div class="chat-window" id="chatWindow">
+
+            <div class="chat-header">
+                <h3>Asistente Raíz IA</h3>
+                <button id="closeChat">×</button>
+            </div>
+
+            <div class="chat-body" id="chatBody">
+                <p class="bot-message">
+                    Hola, soy el asistente de Raíz Caribe. Puedes escribir: 
+                    productos, sin gluten, distribuidor, Agrolab o contacto.
+                </p>
+            </div>
+
+            <form class="chat-form" id="chatForm">
+                <input 
+                    type="text" 
+                    id="chatInput" 
+                    placeholder="Escribe tu pregunta..."
+                >
+                <button type="submit">Enviar</button>
+            </form>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2026 Raíz Caribe. Ecosistema agroempresarial sostenible.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
